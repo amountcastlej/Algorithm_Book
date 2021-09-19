@@ -187,3 +187,72 @@ function Countdownby4(){
     }
 }
 Countdownby4()
+
+// THE BASIC "13"
+
+// # 1 Print 1 - 255
+
+// Print all the integers from 1 to 255
+
+function print1to255(){
+    for (var i = 1; i <= 255; i++){
+        console.log(i);
+    }
+}
+print1to255();
+
+// # 2 Print ints & Sum 0 - 255
+
+// Print integers from 0 to 255 & w/ each integer print the sum so far
+
+function printIntsAndSumZeroToTwoFiftyFive() {
+    var sum = 0
+    for (var i = 0; i <= 255; i++){
+        sum += i;
+        console.log("New Number: " + i + "Sum: " + sum);
+    }
+}
+console.log(printIntsAndSumZeroToTwoFiftyFive())
+
+// # 3 Print Max of Array
+//Given an array, find and print its largest element.
+
+function printMaxOfArray(arr){
+    var largest = arr[0];
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > largest){
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+console.log(printMaxOfArray([1, 3, 5, 8]));
+
+// # 4 Return Odds Array 1-255
+//Create an array with all the odd integers between 1 and 255 (inclusive).
+
+function returnOddsArray1To255(){
+    var odd = [];
+    for (var i = 0; i <= 255; i++){
+        if (i % 2 == 1){
+            odd.push(i);
+        }
+    }
+    return larger
+}
+console.log(returnOddsArray1To255())
+
+// # 5 Return Array Count Greater than Y
+//Given an array and a value Y, count and print the number of array values greater than Y.
+
+function returnArrayCountGreaterThanY(arr, y){
+    var larger = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > y){
+            larger += 1
+        }
+    }
+    return larger;
+}
+
+console.log(returnArrayCountGreaterThanY([2, 4, 3, 8, 1], 3))
