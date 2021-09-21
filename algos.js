@@ -256,3 +256,100 @@ function returnArrayCountGreaterThanY(arr, y){
 }
 
 console.log(returnArrayCountGreaterThanY([2, 4, 3, 8, 1], 3))
+
+// # 6 Print Max, Min, Average Array Values
+//Given an array, print the max, min and average values for that array.
+
+function printMaxMinAverageArrayVals(arr)
+    var max = arr[0];
+    var min = arr[0];
+    var sum = arr[0];
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > max){
+            max = arr[i];
+        }
+        if (arr[i] < min){
+            min = arr[i];
+        }
+        sum += arr[i];
+    }
+    console.log("Max: " + max + "min: " + min);
+    console.log("Avg value: " + sum / arr.length);
+printMaxMinAverageArrayVals([5, 4, 6, 8, 1])
+
+//Swap String for Array Negative Values
+// # 7 Given an array of numbers, replace any negative values with the string 'Dojo'.
+
+function swapStringForArrayNegativeVals(arr){
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+            arr[i] = 'Dojo';
+        }
+    }
+    return arr
+}
+console.log(swapStringForArrayNegativeVals([1, 3, -5, 2, -1]))
+
+// # 8 Print Odds 1-255
+//Print all odd integers from 1 to 255.
+function printOdds1To255(){
+    for (var i = 1; i <=255; i++){
+        if (i % 2 == 1){
+            console.log(i);
+        }
+    }
+}
+printOdds1To255()
+
+// # 9 Print Array Values
+//Iterate through a given array, printing each value.
+function printArrayVals(arr){
+    for (var i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+}
+printArrayVals([1, 2, 3, 4])
+
+// # 10 Print Average of Array
+//Analyze an array’s values and print the average.
+function printAverageOfArray(arr){
+    var sum = arr[0];
+    for (var i = 1; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(printAverageOfArray([2, 4, 6, 8]))
+
+// # 11 Square Array Values
+//Square each value in a given array, returning that same array with changed values.
+function squareArrayVals(arr){
+    for (var i = 0; i < arr.length; i++){
+        arr[i] *= arr[i];
+    }
+    console.log(arr)
+}
+squareArrayVals([2, 4, 5, 3])
+
+// # 12 Zero Out Array Negative Numbers
+//Return the given array, after setting any negative values to zero.
+function zeroOutArrayNegativeVals(arr){
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+            arr[i] = 0;
+        }
+    }
+    return arr;
+}
+console.log(zeroOutArrayNegativeVals([3, -4, -2, -8, 7, -1]))
+
+//  # 13 Shift Array Values Left
+//Given an array, move all values forward (to the left) by one index, dropping the first value and leaving a 0 (zero) value at the end of the array.
+function shiftArrayValsLeft(arr){
+    for (var i =1; i < arr.length; i++){
+        arr[i-1] = arr[i];
+    }
+    arr[arr.length-1] = 0;
+    return arr
+}
+console.log(shiftArrayValsLeft([2, 3, 4, 5]))
