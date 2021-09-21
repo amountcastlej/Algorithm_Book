@@ -277,8 +277,8 @@ function printMaxMinAverageArrayVals(arr)
     console.log("Avg value: " + sum / arr.length);
 printMaxMinAverageArrayVals([5, 4, 6, 8, 1])
 
-//Swap String for Array Negative Values
-// # 7 Given an array of numbers, replace any negative values with the string 'Dojo'.
+// # 7 Swap String for Array Negative Values
+// Given an array of numbers, replace any negative values with the string 'Dojo'.
 
 function swapStringForArrayNegativeVals(arr){
     for (var i = 0; i < arr.length; i++){
