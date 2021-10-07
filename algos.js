@@ -353,3 +353,38 @@ function shiftArrayValsLeft(arr){
     return arr
 }
 console.log(shiftArrayValsLeft([2, 3, 4, 5]))
+
+//Twelve-Bar Blues
+
+//Write a function that console.logs the number 1, then "chick", then "boom", then "chick", then 2,
+//then "chick", "boom", "chick" – continuing the same cycle for each number up to (including) 12.
+
+function twelveBarBlues(){
+    for (var i = 1; i <= 12; i++){
+        console.log(i);
+        console.log("chick")
+        console.log("boom")
+        console.log("chick")
+    }
+}
+twelveBarBlues()
+
+//Rockin’ the Dojo Sweatshirt
+//Ever since you arrived at the Dojo, you wanted one of those cool Coding Dojo sweatshirts – maybe
+//even more than one. Let’s say they cost $20 (including tax), but friendly Josh gives a 9% discount if you
+//buy two, a nice 19% discount if you buy three, or a sweet 35% discount if you buy four or more. He only
+//accepts cash and says he doesn’t have coins, so you should round up to the nearest dollar. Build
+//function sweatshirtPricing(num) that, given a number of sweatshirts, returns the cost.
+
+function sweatshirtPricing(num){
+var shirt = 20; 
+var total = num * shirt;
+    if (num < 1) {return 0;}
+    if (num == 1){return cost;}
+    if (num == 2){total *= 0.91;}
+    if (num == 3) {total *= 0.81;}
+    else {total *= 0.65}
+return Math.ceil(total);
+}
+
+console.log(sweatshirtPricing(5))
