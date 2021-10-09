@@ -388,3 +388,47 @@ return Math.ceil(total);
 }
 
 console.log(sweatshirtPricing(5))
+
+
+function isCreditCardValid(digitArr){
+
+    var lastDigit = digitArr.pop();
+    var sum = 0;
+
+    for (var i = digitArr.length-1; i > 0; i-=2){
+        digitArr[i] = digitArr[i]*2;
+    }
+
+    for (var i = 0; i < digitArr.length; i++){
+        if (digitArr[i] > 9){
+            digitArr[i] -= 9;
+        }
+        sum += digitArr[i];
+    }
+
+    sum += lastDigit;
+
+    if (sum % 10 == 0){
+        return true;
+    }
+    else {
+        return false;
+    }
+    
+}
+
+isCreditCardValid([5,2,2,8,2])
+
+function doubleTrouble(arr){
+
+    for (var i = 0; i < arr.length; i+=2){
+        for (var j = arr.length-1; j > i; j--){
+            arr[j+1] = arr[j]; // lengthens array by one in the process
+        }
+        arr[i+1] = arr[i];
+    }
+    return arr;
+}
+
+doubleTrouble([4,"Ulysses",42,false])
+// [4, 4, "Ulysses", "Ulysses", 42, 42, false, false]
