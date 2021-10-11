@@ -260,7 +260,7 @@ console.log(returnArrayCountGreaterThanY([2, 4, 3, 8, 1], 3))
 // # 6 Print Max, Min, Average Array Values
 //Given an array, print the max, min and average values for that array.
 
-function printMaxMinAverageArrayVals(arr)
+function printMaxMinAverageArrayVals(arr){
     var max = arr[0];
     var min = arr[0];
     var sum = arr[0];
@@ -275,6 +275,7 @@ function printMaxMinAverageArrayVals(arr)
     }
     console.log("Max: " + max + "min: " + min);
     console.log("Avg value: " + sum / arr.length);
+}
 printMaxMinAverageArrayVals([5, 4, 6, 8, 1])
 
 // # 7 Swap String for Array Negative Values
@@ -389,7 +390,8 @@ return Math.ceil(total);
 
 console.log(sweatshirtPricing(5))
 
-
+// Credit Card Validation
+// Create a function that accepts an array of digits on the card and returns a boolean whether the card digits satisfy the Luhn formula
 function isCreditCardValid(digitArr){
 
     var lastDigit = digitArr.pop();
@@ -419,6 +421,9 @@ function isCreditCardValid(digitArr){
 
 isCreditCardValid([5,2,2,8,2])
 
+// Double Tree
+// Create a function that changes a given array to list each original element twice, retaining original order
+
 function doubleTrouble(arr){
 
     for (var i = 0; i < arr.length; i+=2){
@@ -432,3 +437,17 @@ function doubleTrouble(arr){
 
 doubleTrouble([4,"Ulysses",42,false])
 // [4, 4, "Ulysses", "Ulysses", 42, 42, false, false]
+
+// Only Keep The Last Few 
+// Given array arr and number x, remove all except the last x elements, and return arr
+
+function onlyKeepTheLastFew(arr, x){
+    for (var i = 0; i <= arr.length - x; i++){
+        for (var j = 0; j < arr.length; j++){
+            arr[j] = arr[j + 1];
+        }
+        arr.length--;
+    }
+    return arr;
+}
+console.log(onlyKeepTheLastFew([2, 4, 6, 8, 10], 3))
