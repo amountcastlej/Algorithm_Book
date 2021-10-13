@@ -451,3 +451,40 @@ function onlyKeepTheLastFew(arr, x){
     return arr;
 }
 console.log(onlyKeepTheLastFew([2, 4, 6, 8, 10], 3))
+
+function youSayItsYourBirthday(num1,num2){
+    if ((num1==2 && num2==14)|| (num1==14 && num2==2)){
+        console.log("How did you know?");
+    }
+    else{
+        console.log("Just another day...");
+    }
+}
+
+youSayItsYourBirthday(15,2)
+
+function letterGrade(score){
+    var grade;
+    if (score > 100){
+        return "Invalid score.";
+    }
+    if (score < 60){
+        grade = "F";
+    }
+    else if (score < 70){
+            grade = "D";
+        }
+    else if (score < 80){
+        grade = "C";
+    }
+    else if (score < 90){
+        grade = "B";
+    }
+    else if (score <= 100){
+        grade = "A";
+    }
+    console.log("Score: " + score + " Grade: " + grade);
+
+}
+
+letterGrade(62)
