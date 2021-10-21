@@ -501,3 +501,16 @@ function shuffle(arr){
     return arr;
 }
 shuffle([1,2,3,4,5,6,7,8,9,10])
+
+// Remove Duplicates
+// Given an array, remove any duplicate numbers in the array
+function removeDuplicates(arr){
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i+1] != arr[i]){
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+console.log(removeDuplicates([1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]));
